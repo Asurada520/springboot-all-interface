@@ -3,6 +3,7 @@ package com.ybzbcq.service;
 import com.ybzbcq.model.InfoUser;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserService {
 
@@ -36,8 +37,14 @@ public interface UserService {
 
     /**
      * 条件查询
-     * @param infoUser
+     * @param map
      * @return
      */
-    List<InfoUser> selectByMultCondition(InfoUser infoUser);
+    List<InfoUser> selectByMultCondition(Map<String, Object> map);
+
+    /**
+     * 获取总数
+     * @return
+     */
+    int qryCount();
 }
